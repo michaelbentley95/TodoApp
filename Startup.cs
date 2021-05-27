@@ -52,6 +52,8 @@ namespace TodoApp
                 RequireExpirationTime = false
             };
 
+            services.AddSingleton(tokenValidationParams);
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
